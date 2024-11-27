@@ -195,8 +195,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For support and queries:
 - Open an issue in the repository
-- Check the [Wiki](../../wiki) for detailed documentation
-- Join our [Discord community](discord-link)
 
 ---
 
