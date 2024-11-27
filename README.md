@@ -36,20 +36,20 @@ Create a new Codespace for the project.
 3. Environment Variables
 Create a .env file in the root directory with the following keys:
 
-# Plaid API Keys
+### Plaid API Keys
 PLAID_CLIENT_ID=your-client-id
 PLAID_SECRET=your-secret
 PLAID_ENV=sandbox
 
-# Twilio API Keys
+### Twilio API Keys
 TWILIO_ACCOUNT_SID=your-account-sid
 TWILIO_AUTH_TOKEN=your-auth-token
 TWILIO_PHONE_NUMBER=your-twilio-number
 
-# Database URL
+### Database URL
 DATABASE_URL=postgres://user:password@host:port/dbname
 
-# JWT Secret
+### JWT Secret
 JWT_SECRET=your-secret-key
 
 4. Install Dependencies
