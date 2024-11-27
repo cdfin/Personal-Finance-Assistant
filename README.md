@@ -4,57 +4,57 @@ A sophisticated web application designed to revolutionize personal finance manag
 
 ## 🌟 Key Features
 
-- **Intelligent Transaction Tracking**
-  - Real-time bank integration via Plaid API
-  - Smart email receipt parsing
-  - Automated categorization of expenses
+### Intelligent Transaction Tracking
+- Real-time bank integration via Plaid API
+- Smart email receipt parsing
+- Automated categorization of expenses
 
-- **Advanced Budget Analytics**
-  - Machine learning-powered spending pattern analysis
-  - Customizable budget categories
-  - Predictive budget forecasting
+### Advanced Budget Analytics
+- Machine learning-powered spending pattern analysis
+- Customizable budget categories
+- Predictive budget forecasting
 
-- **Smart Notifications**
-  - Customizable SMS and email alerts
-  - Intelligent spending threshold notifications
-  - Weekly/monthly financial summaries
+### Smart Notifications
+- Customizable SMS and email alerts
+- Intelligent spending threshold notifications
+- Weekly/monthly financial summaries
 
-- **Interactive Data Visualization**
-  - Real-time financial dashboard
-  - Custom report generation
-  - Interactive charts and widgets
+### Interactive Data Visualization
+- Real-time financial dashboard
+- Custom report generation
+- Interactive charts and widgets
 
-- **Enterprise-Grade Architecture**
-  - Modular and scalable design
-  - Secure authentication system
-  - Comprehensive API documentation
+### Enterprise-Grade Architecture
+- Modular and scalable design
+- Secure authentication system
+- Comprehensive API documentation
 
 ## 🛠️ Technology Stack
 
 ### Backend Infrastructure
-- **Core**: Node.js, Express.js
-- **Database**: PostgreSQL
-- **ORM**: Prisma
-- **Authentication**: JWT, bcrypt
+- Core: Node.js, Express.js
+- Database: PostgreSQL
+- ORM: Prisma
+- Authentication: JWT, bcrypt
 
 ### Frontend Framework
-- **Framework**: React
-- **Styling**: Tailwind CSS
-- **State Management**: Redux Toolkit
-- **Charts**: Recharts
+- Framework: React
+- Styling: Tailwind CSS
+- State Management: Redux Toolkit
+- Charts: Recharts
 
 ### External Services
-- **Banking Integration**: Plaid API
-- **Notifications**: Twilio
-- **Email Service**: Nodemailer
-- **Hosting**: 
-  - Frontend: Vercel
-  - Backend: Render/Heroku
+- Banking Integration: Plaid API
+- Notifications: Twilio
+- Email Service: Nodemailer
+
+### Hosting
+- Frontend: Vercel
+- Backend: Render/Heroku
 
 ## ⚙️ Prerequisites
 
 Ensure you have the following set up:
-
 - Node.js (v16.x or later)
 - PostgreSQL database
 - Plaid Developer Account
@@ -64,19 +64,31 @@ Ensure you have the following set up:
 
 ## 🚀 Getting Started
 
-### 1. Repository Setup
+### 1. Clone the Repository
 ```bash
-# Clone the repository
 git clone https://github.com/your-username/finance-assistant.git
 cd finance-assistant
+```
 
-# Install dependencies
+### 2. Install Dependencies
+```bash
 npm install
 ```
 
-### 2. Environment Configuration
-Create a `.env` file in the root directory:
+### 3. Backend Setup
+```bash
+cd backend
+npm install
 
+# Configure environment variables
+cp .env.example .env
+
+# Initialize database
+npx prisma migrate dev --name init
+npx prisma generate
+```
+
+Required environment variables (.env):
 ```env
 # Plaid Configuration
 PLAID_CLIENT_ID=your_client_id
@@ -95,14 +107,23 @@ DATABASE_URL=postgres://user:password@host:port/dbname
 JWT_SECRET=your_jwt_secret_key
 ```
 
-### 3. Database Initialization
+### 4. Frontend Setup
 ```bash
-# Initialize Prisma and create database schema
-npx prisma migrate dev --name init
+cd ../frontend
+npm install
+```
+
+### 5. Running the Application
+```bash
+# From root directory
+npm run dev
+
+# Access the application
+Frontend: http://localhost:3000
+Backend: http://localhost:5000
 ```
 
 ## 📁 Project Structure
-
 ```
 finance-assistant/
 ├── backend/
@@ -124,25 +145,6 @@ finance-assistant/
 │   │   └── App.js        # Root component
 │   └── tailwind.config.js
 └── package.json
-```
-
-## 🔧 Development Commands
-
-```bash
-# Start backend development server
-npm run backend:dev
-
-# Start frontend development server
-npm run frontend:dev
-
-# Run both concurrently
-npm run dev
-
-# Run tests
-npm run test
-
-# Build for production
-npm run build
 ```
 
 ## 🔍 Core Features Implementation
@@ -179,6 +181,22 @@ npm run build
 - Financial goal planning
 - Multi-currency support
 
+## 📚 Documentation
+
+### API Documentation
+Detailed API documentation is available in the `/docs` directory, including:
+- Authentication endpoints
+- Transaction management
+- Budget operations
+- Notification settings
+
+### Development Guidelines
+Please follow our coding standards and contribution guidelines:
+- Use TypeScript for type safety
+- Follow ESLint configuration
+- Write unit tests for new features
+- Document API changes
+
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -191,10 +209,11 @@ npm run build
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Support
+## 🆘 Support
 
 For support and queries:
 - Open an issue in the repository
+- Check out the [documentation](docs/README.md)
 
 ---
 
